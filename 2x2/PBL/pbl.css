@@ -1,0 +1,64 @@
+footer {
+    margin-top: 10.8%;
+}
+
+#category-info {
+    color:#fff;
+    display: none;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    margin-left: auto;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+.set2 {
+    color: #cfcfcf;
+    margin-top: -20%;
+}
+
+.rectangle {
+    font-weight: bold;
+    border: 2px solid lightgray;
+    height: auto;
+    width: auto;
+    font-size: 23px;
+    margin-left: 8%;
+    margin-bottom: 8%;
+    padding: 1%;
+}
+
+.table-head {
+    border: 1px solid lightgray;
+    margin: 0%;
+}
+
+.table-body {
+    border: 1px solid lightgray;
+    background-color: #5b5b5b;
+    margin: 0%;
+}
+
+.infoBox {
+    border: 2px solid lightgray;
+    height: 80px;
+}
+
+.line {
+    border: 2px solid #fff;
+    margin-top: 7%;
+    width: auto;
+}
+
+.btn {
+    width: 200px;
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: -10%;
+}
