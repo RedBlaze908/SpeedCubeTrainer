@@ -1,0 +1,70 @@
+footer {
+    margin-top: 9.4%;
+}
+
+.container {
+    text-align: center;
+    background: rgb(40, 40, 40);
+    padding: 20px;
+    color: #fff;
+}
+
+#generateScramble {
+    padding: 10px 20px;
+    font-size: 26px;
+}
+
+#scramble {
+    margin-left: 18%;
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: bold;
+    width: 800px;
+}
+
+#timer {
+    font-size: 88px;
+    margin: 20px 0;
+}
+
+#timeRecorded {
+    font-size: 34px;
+    color: green;
+}
+
+#timer.green {
+    color: green;
+}
+
+.buttons {
+    margin: 2%;
+}
+
+.btn {
+    color: #fff;
+    background-color: #414141;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.btn:hover { 
+    background-color: #a1a1a1;
+}
+
+.btn-download {
+    margin-top: 5%;
+    font-size: 24px;
+}
+
+.img {
+    border: none;
+    margin-left: 1%;
+    width: 80px;
+    -webkit-user-drag: none;
+}
+
+
+
+.box {
+    border: 2px solid lightgray;
+}
