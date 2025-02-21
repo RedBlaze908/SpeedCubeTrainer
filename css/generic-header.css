@@ -1,0 +1,54 @@
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(40, 40, 40);
+}
+::-webkit-scrollbar-thumb {
+    background: #2f3033;
+    border-radius: 10px;
+}
+/*scroll bar /\   */
+
+.body {
+    background-color: rgb(40, 40, 40);
+    margin: 0;
+}
+
+.header {
+    width: 103%;
+    height: 10%;
+    background-color: rgb(24, 24, 24);
+    margin-top: -26px;
+    margin-left: -10px;
+}
+
+/* navbar */
+.navbar-brand {
+    margin-left: 1%;
+}
+
+.nav-link {
+    border-radius: 15px;
+}
+
+.nav-link:hover {
+    border-radius: 15px;
+    background-color: rgb(159, 159, 159);
+}
+/* navbar */
+
+#text-footer {
+    color: #fff;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    &:hover {
+        transition-duration: 0.5s;
+        color: rgb(139, 0, 0);
+    }
+}
+
+.nav-color {
+    background-color: rgb(82, 82, 82);
+}

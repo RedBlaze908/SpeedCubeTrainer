@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../CLL/img/eg1.png">
+    <link rel="stylesheet" href="../../css/generic-header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="../CLL/cll.css">
+    <title>EG1 - SpeedCubeTrainer</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <div w3-include-html="../../html/navbar.html" id="start"></div>
+
+    <div class="content text-light mt-5 mb-5">
+        <div class="row">
+            <div class="col-sm-7">
+                <h1 class="fw-bold text-center">Jump To:</h1>
+                <div class="d-block text-center fs-5">
+                    <a href="#H" class="jumpa">H</a>
+                    <a href="#T" class="jumpa">T</a>
+                    <a href="#Pi" class="jumpa">Pi</a>
+                    <a href="#U" class="jumpa">U</a>
+                    <a href="#L" class="jumpa">L</a>
+                    <a href="#Sune" class="jumpa">Sune</a>
+                    <a href="#Anti-Sune" class="jumpa">Anti-Sune</a>
+                </div>
+                <div class="d-flex mt-5">
+                    <div class="block">
+                        <p class="text-center fs-5">Seen from the front</p>
+                        <img src="../CLL/img/eg1-front.png" alt="front-EG1" class="mx-auto d-block">
+                    </div>
+                    <div class="block">
+                        <p class="text-center fs-5">Seen from the back</p>
+                        <img src="../CLL/img/eg1-back.png" alt="back-EG1" class="mx-auto d-block">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 text-light infoBox mt-5" id="infoF2L">
+                <div class="d-flex">
+                    <h1 class="fw-bold ms-5 mt-2">EG1</h1>
+                    <div id="infoBtn" class="toggle-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16" >
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div id="category-info" class="text-light ms-5">
+                    <h2>2x2</h2>
+                    <p class="ms-1 fs-5">
+                        EG1 is a method the tipically you learn after CLL. The EG1 Method has 42 algorithms. The EG1 method differs from CLL because it has two swapped pieced in the bottom layer.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <p class="text-center fs-2">Progress Bar</p>
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" id="progress-bar"></div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- H algs -->
+    <div class="content-fluid text-light" id="H">
+        <div class="row align-items-center bgGray">
+            
+            <h1 class="text-center fw-bold">H</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1H1')" type="checkbox" id="1H1"></input>
+                <p class="fw-bold fs-3 text-center">H 1</p>
+                <img src="../CLL/img/h1.png" alt="H-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' F R2 U' R' F R U R' F'</p>
+                <p class="Alg mx-auto d-block">2) R' F R2 U' R2 U' F U R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1H2')" type="checkbox" id="1H2"></input>
+                <p class="fw-bold fs-3 text-center">H 2</p>
+                <img src="../CLL/img/h2.png" alt="H-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) F' U R U' R2 F2 R U' F</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1H3')" type="checkbox" id="1H3"></input>
+                <p class="fw-bold fs-3 text-center">H 3</p>
+                <img src="../CLL/img/h3.png" alt="H-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' U' R' F2 U F' R F' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1H4')" type="checkbox" id="1H4"></input>
+                <p class="fw-bold fs-3 text-center">H 4</p>
+                <img src="../CLL/img/h4.png" alt="H-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R U R' F' R U R' U' R U R' </p>
+            </div>
+        </div>
+        <!-- End H algs-->
+
+        <!-- T algs -->
+        <div class="row align-items-center mt-3" id="T">
+            <h1 class="text-center fw-bold">T</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1T1')" type="checkbox" id="1T1"></input>
+                <p class="fw-bold fs-3 text-center">T 1</p>
+                <img src="../CLL/img/t1.png" alt="T-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U) F R U' R2 F' R U R' F' R</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1T2')" type="checkbox" id="1T2"></input>
+                <p class="fw-bold fs-3 text-center">T 2</p>
+                <img src="../CLL/img/t2.png" alt="T-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U) F' R' F R2 U R' U' R U R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1T3')" type="checkbox" id="1T3"></input>
+                <p class="fw-bold fs-3 text-center">T 3</p>
+                <img src="../CLL/img/t3.png" alt="T-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' F R2 U' R' U' R' F2 R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1T4')" type="checkbox" id="1T4"></input>
+                <p class="fw-bold fs-3 text-center">T 4</p>
+                <img src="../CLL/img/t4.png" alt="T-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R2 B2 U' R' U' R U' R' U R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1T5')" type="checkbox" id="1T5"></input>
+                <p class="fw-bold fs-3 text-center">T 5</p>
+                <img src="../CLL/img/t5.png" alt="T-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' F' R2 U R' F' R U R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1T6')" type="checkbox" id="1T6"></input>
+                <p class="fw-bold fs-3 text-center">T 6</p>
+                <img src="../CLL/img/t6.png" alt="T-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) F2 R U R' U2 R U R' U' F </p>
+                <p class="Alg mx-auto d-block">2) (U') R' F R2 U R' F' U2' R' F R F'</p>
+            </div>
+
+        </div>
+        <!-- End T algs -->
+
+        <!-- Pi algs -->
+        <div class="row align-items-center bgGray mt-3" id="Pi">
+            <h1 class="text-center fw-bold">Pi</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Pi1')" type="checkbox" id="1Pi1"></input>
+                <p class="fw-bold fs-3 text-center">Pi 1</p>
+                <img src="../CLL/img/pi1.png" alt="Pi-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) F2 R U R' U2 R U R' U' F </p>
+                <p class="Alg mx-auto d-block">2) (U) F U' R' F R U' F2 R U R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Pi2')" type="checkbox" id="1Pi2"></input>
+                <p class="fw-bold fs-3 text-center">Pi 2</p>
+                <img src="../CLL/img/pi2.png" alt="Pi-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') R U' R2 F R2 U' R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Pi3')" type="checkbox" id="1Pi3"></input>
+                <p class="fw-bold fs-3 text-center">Pi 3</p>
+                <img src="../CLL/img/pi3.png" alt="Pi-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') F R' F U' F2 R U R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Pi4')" type="checkbox" id="1Pi4"></input>
+                <p class="fw-bold fs-3 text-center">Pi 4</p>
+                <img src="../CLL/img/pi4.png" alt="Pi-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') R U' R' U R U' R' F R U' R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Pi5')" type="checkbox" id="1Pi5"></input>
+                <p class="fw-bold fs-3 text-center">Pi 5</p>
+                <img src="../CLL/img/pi5.png" alt="Pi-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') R' F R F' R' F R2 U R' U' R U' R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Pi6')" type="checkbox" id="1Pi6"></input>
+                <p class="fw-bold fs-3 text-center">Pi 6</p>
+                <img src="../CLL/img/pi6.png" alt="Pi-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') L F' L' F L F' L2 U' L U L' U L</p>
+            </div>
+
+        </div>
+        <!-- End Pi Algs-->
+
+        <!-- U Algs-->
+        <div class="row align-items-center mt-3" id="U">
+            <h1 class="text-center fw-bold">U</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1U1')" type="checkbox" id="1U1"></input>
+                <p class="fw-bold fs-3 text-center">U 1</p>
+                <img src="../CLL/img/u1.png" alt="U-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R U R' U R U R2 F R2 U' R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1U2')" type="checkbox" id="1U2"></input>
+                <p class="fw-bold fs-3 text-center">U 2</p>
+                <img src="../CLL/img/u2.png" alt="U-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') y R' U R' U' R U' R' U' F2 R2 </p>
+                <p class="Alg mx-auto d-block">2) F R2 B R2' F U F2 R2</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1U3')" type="checkbox" id="1U3"></input>
+                <p class="fw-bold fs-3 text-center">U 3</p>
+                <img src="../CLL/img/u3.png" alt="U-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U) F' U2 R U2 R' U2 F </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1U4')" type="checkbox" id="1U4"></input>
+                <p class="fw-bold fs-3 text-center">U 4</p>
+                <img src="../CLL/img/u4.png" alt="U-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) R' F R F' R' F R2 U' R' </p>
+                <p class="Alg mx-auto d-block">2) R U' R' F R U' R2 F R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1U5')" type="checkbox" id="1U5"></input>
+                <p class="fw-bold fs-3 text-center">U 5</p>
+                <img src="../CLL/img/u5.png" alt="U-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) R' F R F' U R U' R' F R U' R'</p>
+                <p class="Alg mx-auto d-block">2) (U) F U' R' F2 R F' U2 F'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1U6')" type="checkbox" id="1U6"></input>
+                <p class="fw-bold fs-3 text-center">U 6</p>
+                <img src="../CLL/img/u6.png" alt="U-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') R' F R U' R' F R U' R U R' F'</p>
+                <p class="Alg mx-auto d-block">1) (U) F' U L F2 L' F U2 F</p>
+            </div>
+
+        </div>
+        <!-- End U Algs-->
+
+        <!-- L Algs -->
+        <div class="row align-items-center bgGray mt-3" id="L">
+            <h1 class="text-center fw-bold">L</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1L1')" type="checkbox" id="1L1"></input>
+                <p class="fw-bold fs-3 text-center">L 1</p>
+                <img src="../CLL/img/l1.png" alt="L-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R U' R' U R U' R2 F' R F </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1L2')" type="checkbox" id="1L2"></input>
+                <p class="fw-bold fs-3 text-center">L 2</p>
+                <img src="../CLL/img/l2.png" alt="L-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U) R' F R U' R' F R2 U R' F'</p>
+                <p class="Alg mx-auto d-block">2) (U) L' U L U' R' F R2 U R' F'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1L3')" type="checkbox" id="1L3"></input>
+                <p class="fw-bold fs-3 text-center">L 3</p>
+                <img src="../CLL/img/l3.png" alt="L-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' U R2 U' R2 U' F R2 U' R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1L4')" type="checkbox" id="1L4"></input>
+                <p class="fw-bold fs-3 text-center">L 4</p>
+                <img src="../CLL/img/l4.png" alt="L-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' F R2 U R' F' R U2 R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1L5')" type="checkbox" id="1L5"></input>
+                <p class="fw-bold fs-3 text-center">L 5</p>
+                <img src="../CLL/img/l5.png" alt="L-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U) R U R' F' R U R' U' F R' F' R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1L6')" type="checkbox" id="1L6"></input>
+                <p class="fw-bold fs-3 text-center">L 6</p>
+                <img src="../CLL/img/l6.png" alt="L-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') F R U' R' U R' F' R U R' F' R</p>
+                <p class="Alg mx-auto d-block">2) L' U' L F L' U' L U F' R U R'</p>
+            </div>
+
+        </div>
+        <!-- End L Algs -->
+
+        <!-- Sune Algs -->
+        <div class="row align-items-center mt-3" id="Sune">
+            <h1 class="text-center fw-bold">Sune</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Sune1')" type="checkbox" id="1Sune1"></input>
+                <p class="fw-bold fs-3 text-center">Sune 1</p>
+                <img src="../CLL/img/sune1.png" alt="Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') F' L U2 F2 R U' </p>
+                <p class="Alg mx-auto d-block">2) (U2) R U R' U F R U' R2 F' R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Sune2')" type="checkbox" id="1Sune2"></input>
+                <p class="fw-bold fs-3 text-center">Sune 2</p>
+                <img src="../CLL/img/sune2.png" alt="Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R U R' F2 U F R U R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Sune3')" type="checkbox" id="1Sune3"></input>
+                <p class="fw-bold fs-3 text-center">Sune 3</p>
+                <img src="../CLL/img/sune3.png" alt="Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) F R' F' R U R' F' R2 U R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Sune4')" type="checkbox" id="1Sune4"></input>
+                <p class="fw-bold fs-3 text-center">Sune 4</p>
+                <img src="../CLL/img/sune4.png" alt="Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) F' U R U' R' U F R U R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Sune5')" type="checkbox" id="1Sune5"></input>
+                <p class="fw-bold fs-3 text-center">Sune 5</p>
+                <img src="../CLL/img/sune5.png" alt="Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U) R U' R' U R U' R' U F R U' R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1Sune6')" type="checkbox" id="1Sune6"></input>
+                <p class="fw-bold fs-3 text-center">Sune 6</p>
+                <img src="../CLL/img/sune6.png" alt="Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R' F R2 U' R' U R U' R' F </p>
+            </div>
+
+        </div>
+        <!-- End Sune Algs -->
+
+        <!-- Anti-Sune Algs-->
+        <div class="row align-items-center bgGray mt-3" id="Anti-Sune">
+            <h1 class="text-center fw-bold">Anti-Sune</h1>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1AntiSune1')" type="checkbox" id="1AntiSune1"></input>
+                <p class="fw-bold fs-3 text-center">Anti-Sune 1</p>
+                <img src="../CLL/img/antisune1.png" alt="Anti-Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) U F R' U2 F2 R' F U'</p>
+                <p class="Alg mx-auto d-block">2) (U) R' F R2 U R' F' U' R U' R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1AntiSune2')" type="checkbox" id="1AntiSune2"></input>
+                <p class="fw-bold fs-3 text-center">Anti-Sune 2</p>
+                <img src="../CLL/img/antisune2.png" alt="Anti-Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) U2 R U2 R2 F' R F2 U' F'</p>
+                <p class="Alg mx-auto d-block">2) (U) R U' R' F' U' F2 R U' R' </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1AntiSune3')" type="checkbox" id="1AntiSune3"></input>
+                <p class="fw-bold fs-3 text-center">Anti-Sune 3</p>
+                <img src="../CLL/img/antisune3.png" alt="Anti-Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) F' R U R' U' R U R2 F' R </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1AntiSune4')" type="checkbox" id="1AntiSune4"></input>
+                <p class="fw-bold fs-3 text-center">Anti-Sune 4</p>
+                <img src="../CLL/img/antisune4.png" alt="Anti-Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) R U' R' F' U' R U R' U' F </p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1AntiSune5')" type="checkbox" id="1AntiSune5"></input>
+                <p class="fw-bold fs-3 text-center">Anti-Sune 5</p>
+                <img src="../CLL/img/antisune5.png" alt="Anti-Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U') R U R' F' U' R U R' U' R U R'</p>
+            </div>
+            <div class="col">
+                <input class="BTN mx-auto d-block form-check-input" onclick="checkBtn('1AntiSune6')" type="checkbox" id="1AntiSune6"></input>
+                <p class="fw-bold fs-3 text-center">Anti-Sune 6</p>
+                <img src="../CLL/img/antisune6.png" alt="Anti-Sune-EG1" width="130" height="130" class="mx-auto d-block">
+                <p class=" fs-5 text-decoration-underline text-center mt-2">Algorithms</p>
+                <p class="Alg mx-auto d-block">1) (U2) R U' R2 F R U' R' F R F' </p>
+            </div>
+
+        </div>
+        <!-- End Anti-Sune Algs -->
+
+    </div>
+
+    <a class="mx-auto d-block text-center text-decoration-none fs-3 button mt-5" style="color: #575757;" href="#start">Back Up</a>
+
+
+      <script src="bar.js"></script>
+      <script src="../CLL/cll.js"></script>
+      <div w3-include-html="../../html/footer.html" class="footer"></div>
+
+      <script>w3.includeHTML();</script>
+</body>
+
+</html>

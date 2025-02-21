@@ -1,0 +1,184 @@
+footer {
+    margin-top: 7%;
+}
+
+/* welcome site */
+.container{
+    margin-top: 3%;
+    color: #fff;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 60px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+/* end welcome */
+
+/* box news */
+.blocks {
+    display: flex;
+    justify-content: center;
+}
+
+#news{
+    color:#fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 29%;
+    margin-bottom: -5%;
+}
+
+#news2{
+    color:#fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 43%;
+    margin-bottom: -5%;
+}
+
+.box{
+    color: #fff;
+    height: 400px;
+    padding: 10px;
+    border: 5px solid lightgray;
+    margin: 0;
+    margin-left: 10%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 5%;
+}
+
+/* end box news */
+
+.things {
+    display: flex;
+    margin-left: 3%;
+}
+
+.solve3x3 {
+    color: #fff;
+    background-color: #575757;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    width: 500px;
+    height: 350px;
+    margin-left: 3.5%;
+}
+
+.solve3x3 p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+.cardBlock {
+    background-color: #575757;
+}
+
+.take {
+    border-style: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 5%;
+    background-color: lightgrey;
+    transition: 0.5s;
+    &:hover {
+        transition: 0.5s;
+        box-shadow: 0px 0px 80px 5px #fff;
+    }
+}
+
+.take:Hover {
+    background-color: #afafaf;
+}
+
+#beginner {
+    margin-left: 20%;
+    margin-top: 12%;
+    width: 280px;
+    height: 50px;
+}
+
+#notation {
+    margin-left: 38%;
+    margin-bottom: -5%;
+    width: 80px;
+    height: 80px;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+.bold20 {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.mlfont {
+    margin-left: 25px;
+    font-size: 19px;
+}
+
+.font-size20 {
+    font-size: 20px;
+}
+
+.lineG {
+    border-top: 2px solid lightgray;
+    width: 100%;
+}
+
+.imgFilter {
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+    filter: blur(2px);
+}
+
+.imgCube1 {
+    rotate: 20deg;
+    margin-left: 8%;
+    margin-top: -2%;
+}
+
+.imgCube2 {
+    rotate: -20deg;
+    margin-left: -24%;
+    margin-top: 2%;
+}
+
+.imgCube3 {
+    rotate: 25deg;
+    margin-left: -40%;
+    margin-top: 14%;
+}
+
+.imgCube4 {
+    rotate: -25deg;
+    margin-left: 38%;
+    margin-top: 18%;
+}
+
+@media (max-width: 551px) {
+    .imgCube1 {
+        rotate: 20deg;
+        margin-left: 2%;
+        margin-top: -2%;
+    }
+    
+    .imgCube2 {
+        rotate: -20deg;
+        margin-left: -44%;
+        margin-top: 2%;
+    }
+}

@@ -1,0 +1,94 @@
+footer {
+    margin-top: 2%;
+}
+
+.block {
+    /*border: 3px solid lightgray;*/
+    width: 800px;
+    height: 400px;
+}
+
+.jumpa {
+    margin: 1%;
+    color: #fff;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+
+#category-info {
+    color:#fff;
+    display: none;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    margin-left: auto;
+}
+
+.infoBox {
+    border: 2px solid lightgray;
+    height: 80px;
+}
+
+.bgGray {
+    background-color: rgb(82,82,82);
+}
+
+.wave {
+    background-color: rgb(63, 63, 63);
+}
+
+.custom-shape-divider-top-1735035988 .shape-fill, .custom-shape-divider-top-1735036280 {
+    fill: rgb(40, 40, 40);
+}
+
+.custom-shape-divider-bottom-1735036101 .shape-fill {
+    fill: rgb(82, 82, 82);
+}
+
+.Alg {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    margin-top: 1%;
+    border: 3px solid #fff;
+}
+
+.row {
+    max-width: 100.5%;
+}
+
+.button {
+    background-color: lightgray;
+    width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.mt-l15 {
+    margin-top: -15%;
+}
+
+.progress, .progress-stacked {
+    background-color: rgb(63, 63, 63);
+}
+
+.progress-bar {
+    width: 0%;
+}
+ 
+.bi-check-circle-fill {
+    display: none;
+}
+
+.form-check-input {
+    width: 1.3em;
+    height: 1.3em;
+}
