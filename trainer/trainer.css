@@ -1,0 +1,33 @@
+.btnG {
+    background-color: rgb(86, 86, 86);
+    border: none;
+    width: 50%;
+    &:hover {
+        background-color: lightgray;
+        color: #000;
+    }
+}
+
+.size {
+    width: 90%;
+}
+
+.card {
+    background-color: rgb(86, 86, 86);
+}
+
+.card-img-top {
+    width: 50%;
+    transition: 0.5s;
+    &:hover {
+        transition: 0.5s;
+        width: 55%;
+        cursor: pointer;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 79.6vh;
+}

@@ -1,0 +1,274 @@
+/* xs */
+@media (min-width: 475px) {
+    .container {
+        text-align: center;
+        background: rgb(40, 40, 40);
+        padding: 0px;
+        margin: 0px;
+        color: #fff;
+    }
+
+    .scroll-box {
+        width: 400px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        top: 20%; 
+        left: 20px; 
+        text-align: left;
+        font-size: 25px;
+    }
+
+    #timeboxp {
+        position: relative;
+        margin-left: -10%;
+    }
+
+    .buttons {
+        margin: 8%;
+    }
+
+    .btn {
+        margin: 0.5%;
+    }
+
+    #scramble {
+        font-size: 20px;
+        margin-left: 5%;
+        margin-top: 5%;
+        width: 400px;
+    }
+
+    .btn-download {
+        display: none;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .scroll-box {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        top: 20%; 
+        left: 1px; 
+        text-align: left;
+        font-size: 25px;
+    }
+
+    #timeboxp {
+        position: relative;
+        margin-left: -10%;
+    }
+
+    .buttons {
+        margin: 5%;
+    }
+
+    .btn {
+        margin: 0.5%;
+    }
+
+    #scramble {
+        font-size: 25px;
+        margin-left: 0%;
+        margin-top: 5%;
+        width: 500px;
+    }
+
+    .btn-download {
+        display: none;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .container {
+        text-align: center;
+        background: rgb(40, 40, 40);
+        padding: 10px;
+        color: #fff;
+    }
+
+    .scroll-box {
+        width: 650px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        top: 20%; 
+        left: 8px; 
+        text-align: left;
+        font-size: 25px;
+    }
+
+    #scramble {
+        font-size: 25px;
+        margin-left: 6%;
+        margin-top: 5%;
+        width: 600px;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        text-align: center;
+        background: rgb(40, 40, 40);
+        padding: 0px;
+        margin: 0px;
+        color: #fff;
+    }
+
+    .scroll-box {
+        width: 650px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        top: 20%; 
+        left: 128px; 
+        text-align: left;
+        font-size: 25px;
+    }
+
+    #scramble {
+        font-size: 25px;
+        margin-left: 18%;
+        margin-top: 5%;
+        width: 600px;
+    }
+
+    .buttons {
+        margin: 2%;
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        text-align: center;
+        background: rgb(40, 40, 40);
+        padding: 0px;
+        margin: 0px;
+        color: #fff;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .scroll-box {
+        width: 650px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        top: 20%; 
+        left: 240px; 
+        text-align: left;
+        font-size: 25px;
+    }
+
+    #scramble {
+        font-size: 30px;
+        margin-left: 20%;
+        margin-top: 5%;
+        width: 700px;
+    }
+
+    .buttons {
+        margin: 2%;
+    }
+
+    .btn-download {
+        margin-top: 5%;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        text-align: center;
+        background: rgb(40, 40, 40);
+        padding: 0px;
+        margin: 0px;
+        color: #fff;
+        margin-left: 12%;
+        margin-top: 2%;
+    }
+
+    #timeboxp {
+        position: absolute;
+        margin-left: 4.5%;
+        margin-top: 9%;
+    }
+
+    .scroll-box {
+        width: 350px;
+        height: 500px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: absolute;
+        top: 40%; 
+        left: 50px; 
+        text-align: left;
+        font-size: 25px;
+    }
+
+    #timer {
+        font-size: 130px;
+        margin: 20px 0;
+        margin-left: 1%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    #scramble {
+        font-size: 40px;
+        margin-left: 16%;
+        margin-top: 5%;
+        width: 900px;
+    }
+
+    .buttons {
+        margin: 2%;
+        margin-left: 5%;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .btn-download {
+        display: inline;
+        margin-top: 5%;
+    }
+}
