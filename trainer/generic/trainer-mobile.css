@@ -1,0 +1,101 @@
+/* xs */
+@media (max-width: 475px) {
+    .things {
+        width: 450px;
+    }
+
+    #scramble {
+        width: 400px;
+        text-align: center;
+    }
+
+    .btn-download {
+        display: none;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .row{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .things {
+        width: 600px;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) {
+    .row{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .things {
+        width: 730px;
+    }
+
+    #scramble {
+        width: 500px;
+        text-align: center;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .row{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .things {
+        width: 980px;
+    }
+
+    #scramble {
+        width: 700px;
+        text-align: center;
+    }
+
+    .btn-download {
+        display: block;
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .row{
+        display: flex;
+    }
+
+    .things {
+        width: 880px;
+    }
+
+    #scramble {
+        width: 700px;
+        text-align: center;
+    }
+
+    .btn-download {
+        display: block;
+    }
+
+    footer {
+        margin-top: 11%;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    
+}
