@@ -1,0 +1,110 @@
+footer {
+    margin-top: 10.8%;
+}
+
+.info {
+    display: flex;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+.jumpa {
+    margin: 1%;
+    color: #fff;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.line {
+    border: 2px solid #fff;
+    margin-top: 7%;
+}
+
+.dropdown-divider {
+    width: 100%;
+}
+
+#setup {
+    border: 2px solid lightgray; 
+    color: #fff;
+    font-weight: bold;
+    height: 70px;
+    width: 500px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    margin-left: auto;
+}
+
+#category-info {
+    color:#fff;
+    display: none;
+}
+
+#infoF2L {
+    border: 2px solid #fff;
+    width: 400px;
+    margin-left: 5%;
+    height: 80px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 35px;
+    width: 150px;
+    text-align: center;
+    margin-left: -8%;
+}
+
+.name2 {
+    font-weight: bold;
+    font-size: 35px;
+    width: 150px;
+    text-align: center;
+    margin-left: -5%;
+}
+
+.set {
+    font-size: 20px;
+    width: auto;
+    text-align: left;
+    color:#cfcfcf;
+    margin-top: -10%;
+    margin-left: 4%;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.modal-dialog {
+    height: 20%;
+}
+
+.modal-content {
+    height: 80%;
+}
+
+.button {
+    background-color: lightgray;
+    width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+}
