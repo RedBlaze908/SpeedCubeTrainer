@@ -1,0 +1,70 @@
+/*
+#######################################################
+                    Code taken from:
+        ciscou: https://github.com/ciscou/cubecss
+
+#######################################################
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cube-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.controls button {
+  font-size: 0.5rem;
+  padding: .125em .5em;
+}
+
+.controls button.reset,
+.controls button.finish {
+  display: none;
+}
+
+@media (min-width: 180px) {
+  .controls button.reset,
+  .controls button.finish {
+    display: inline;
+  }
+}
+
+@media (min-width: 200px) {
+  .controls button {
+    font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 240px) {
+  .controls button {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .controls button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .controls button {
+    font-size: 1.5rem;
+  }
+}
