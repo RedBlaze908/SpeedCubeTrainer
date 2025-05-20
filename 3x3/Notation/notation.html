@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../img/cube3x3.png">
+    <link rel="stylesheet" href="notation.css">
+    <link rel="stylesheet" href="../../css/generic-header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>Notation - SpeedCubeTrainer</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <div w3-include-html="../../navbar.html" autofocus ></div>
+      <!-- End nav -->
+
+      <div class="content">
+        <h1>Cube Notation</h1>
+        <p>Rubik's cube notation is really important especially to learn how to read<br>
+            the algorithms and then know how to interpret and use them.<br>
+            Let's take a look at how to read the moves of the cube.</p>
+      </div>
+      
+      <!--<div class="spacer "><img src="../../svg/wave.png" ></div>-->
+      <img src="../../svg/wave.png" style="width: 100%;height: 600px;">
+      <div class="basics">
+        <h1>Basic Moves</h1>
+        <p>Each letter of the cube in capital letters means, turn one layer of the rubik's cube clockwise.</p>
+        <!-- style="display: flex;align-items: center;justify-content: center;" -->
+        <div class="move">
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">R</p>
+                <img src="img/R.png" width="200" height="200">
+                <p>Right</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">L</p>
+                <img src="img/L.png" width="200" height="200">
+                <p>Left</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">U</p>
+                <img src="img/U.png" width="200" height="200">
+                <p>Up</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">D</p>
+                <img src="img/D.png" width="200" height="200">
+                <p>Down</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">F</p>
+                <img src="img/F.png" width="200" height="200">
+                <p>Front</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">B</p>
+                <img src="img/B.png" width="200" height="200">
+                <p>Back</p>
+            </div>
+        </div>
+      </div>
+      <img src="../../svg/wave2.png" style="width: 100%;height: 600px;">
+
+      <div class="anti-moves">
+        <h1>Counterclockwise Moves</h1>
+        <p>Counterclockwise moves only exactly the opposite of clockwise moves.</p>
+        <div class="move">
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">R'</p>
+                <img src="img/R'.png" width="200" height="200">
+                <p>Right</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">L'</p>
+                <img src="img/L'.png" width="200" height="200">
+                <p>Left</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">U'</p>
+                <img src="img/U'.png" width="200" height="200">
+                <p>Up</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">D'</p>
+                <img src="img/D'.png" width="200" height="200">
+                <p>Down</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">F'</p>
+                <img src="img/F'.png" width="200" height="200">
+                <p>Front</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">B'</p>
+                <img src="img/B'.png" width="200" height="200">
+                <p>Back</p>
+            </div>
+        </div>
+      </div>
+
+      <img src="../../svg/wave.png" style="width: 100%;height: 600px;">
+      <div class="basics">
+        <h1>Double Moves</h1>
+        <p>When we read a 2 after the letter it means that we should turn the indicated<br> single layer twice (clockwise or counterclockwise is irrelevant).</p>
+        <div class="move">
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">R2</p>
+                <img src="img/R2.png" width="200" height="200">
+                <p>Right</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">L2</p>
+                <img src="img/L2.png" width="200" height="200">
+                <p>Left</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">U2</p>
+                <img src="img/U2.png" width="200" height="200">
+                <p>Up</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">D2</p>
+                <img src="img/D2.png" width="200" height="200">
+                <p>Down</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">F2</p>
+                <img src="img/F2.png" width="200" height="200">
+                <p>Front</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">B2</p>
+                <img src="img/B2.png" width="200" height="200">
+                <p>Back</p>
+            </div>
+        </div>
+      </div>
+
+      <img src="../../svg/wave2.png" style="width: 100%;height: 600px;">
+
+      <div class="anti-moves">
+        <h1>Wide Moves</h1>
+        <p>After all these types of moves, there are moves that use more layers,<br>
+            there are two ways to write them, the first is with the same letters as<br>
+            before but with the lower case letter, the alternative is to write the letter followed by a w and then ' or 2.</p>
+        <div class="move">
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">r / Rw</p>
+                <img src="img/Rw.png" width="200" height="200">
+                <p>Right</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">l / Lw</p>
+                <img src="img/Lw.png" width="200" height="200">
+                <p>Left</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">u / Uw</p>
+                <img src="img/Uw.png" width="200" height="200">
+                <p>Up</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">d / Dw</p>
+                <img src="img/Dw.png" width="200" height="200">
+                <p>Down</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">f / Fw</p>
+                <img src="img/Fw.png" width="200" height="200">
+                <p>Front</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">b / Bw</p>
+                <img src="img/Bw.png" width="200" height="200">
+                <p>Back</p>
+            </div>
+        </div>
+      </div>
+
+      <img src="../../svg/wave.png" style="width: 100%;height: 600px;">
+      <div class="basics">
+        <h1>Slice Turns</h1>
+        <p>These are moves that allow you to move the middle layer of the cube, there are also opposite moves with ' and double moves with 2.</p>
+        <div class="move">
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">M</p>
+                <img src="img/M.png" width="200" height="200">
+                <p>Follow L</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">S</p>
+                <img src="img/S.png" width="200" height="200">
+                <p>Follow F</p>
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">E</p>
+                <img src="img/E.png" width="200" height="200">
+                <p>Follow D</p>
+            </div>
+        </div>
+      </div>
+
+      <img src="../../svg/wave2.png" style="width: 100%;height: 600px;">
+
+      <div class="anti-moves">
+        <h1>Rotation Cube</h1>
+        <p>In addition to all the moves, there are also letters that indicate the rotation of the entire cube.</p>
+        <div class="move">
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">X</p>
+                <img src="img/X.png" width="200" height="200">
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">X'</p>
+                <img src="img/X'.png" width="200" height="200">
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">Y</p>
+                <img src="img/Y.png" width="200" height="200">
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">Y'</p>
+                <img src="img/Y'.png" width="200" height="200">
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">Z</p>
+                <img src="img/Z.png" width="200" height="200">
+            </div>
+            <div style="display: inline;">
+                <p style="font-weight: bold;font-size: 30px;">Z'</p>
+                <img src="img/Z'.png" width="200" height="200">
+            </div>
+        </div>
+      </div>
+      <img src="../../svg/wave.png" style="width: 100%;height: 600px;">
+
+      <div class="basics2">
+        <h1>Example of scramble</h1>
+        <p>Let us now try an example scramble to see how it works, so follow the scramble below and<br>
+          try to see if you get the same result at the end.</p>
+        <h2 style="font-weight: bold;">D B L2 D2 F' D2 R2 F2 D2 F' R2 D2 U' B2 D2 R' B2 F2 D2</h2>
+        <img src="img/scramble.png" id="scramble-img">
+        <p>Scrambles are always performed with the white face up and the green face forward.</p>
+      </div>
+      <img src="../../svg/wave2.png" style="width: 100%;height: 600px;">
+
+      <div style="margin-left: 45%;margin-top: 5%;background-color: lightgray;width: 200px;text-align: center;border-radius: 15px;">
+        <a href="#start" style="color:#575757;font-size: 25px;text-decoration: none;">Back Up</a>
+      </div>
+
+      <footer class="text-center bg-body-tertiary">
+        <div class="text-center p-3" style="background-color: rgb(82, 82, 82);color: #fff;">
+          © 2024 Copyright:
+          <a id="text-footer" href="https://www.youtube.com/@RedBlaze9080">RedBlaze908</a>
+        </div>
+      </footer>
+      <script>w3.includeHTML();</script>
+</body>
+</html>
