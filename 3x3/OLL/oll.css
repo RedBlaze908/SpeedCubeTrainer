@@ -35,3 +35,15 @@ img {
     border-radius: 15px;
     cursor: pointer;
 }
+
+.line {
+    border: 1px solid lightgray;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.box {
+    border: 2px solid lightgray;
+}
