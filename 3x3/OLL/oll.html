@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/OLL.png">
+    <link rel="stylesheet" href="oll.css">
+    <link rel="stylesheet" href="../3DCube/3Dcube.css">
+    <link rel="stylesheet" href="../../css/generic-header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>OLL - SpeedCubeTrainer</title>
+</head>
+<body class="body">
+    <div w3-include-html="../../html/navbar.html" id="start"></div>
+
+    <div class="container text-light mb-5">
+        <div class="row mt-5">
+            <div class="col-sm-6">
+                <h1 class="fw-bold text-center">Jump To:</h1>
+                <div class="text-center fs-5">
+                    <a class="jumpa" href="#Solved Cross">Solved Cross</a>
+                    <a class="jumpa" href="#T Shapes">T Shapes</a>
+                    <a class="jumpa" href="#Block Shapes">Blocks</a>
+                    <a class="jumpa" href="#Edges Only">Edges Only</a>
+                    <a class="jumpa" href="#Lightnings">Lightnings</a>
+                    <a class="jumpa" href="#P Shapes">P Shapes</a>
+                </div>
+                <div class="text-center fs-5">
+                    <a class="jumpa" href="#C Shapes">C Shapes</a>
+                    <a class="jumpa" href="#Fishes">Fishes</a>
+                    <a class="jumpa" href="#W Shapes">W Shapes</a>
+                    <a class="jumpa" href="#Hooks">Hooks</a>
+                </div>
+                <div class="text-center fs-5">
+                    <a class="jumpa" href="#Lines">Lines</a>
+                    <a class="jumpa" href="#L Shape">L Shape</a>
+                    <a class="jumpa" href="#Awkward Shaped">Awkward Shaped</a>
+                    <a class="jumpa" href="#Dot Case">Dot Case</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div id="infoF2L" >
+                    <div class="d-flex">
+                        <h1 class="text-center fw-bold ms-5 mt-2">OLL</h1>
+                        <div id="infoBtn" class="toggle-icon m-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16" >
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="category-info" style="color:#fff;display: none;margin-left: 5%;">
+                        <h2>3x3</h2>
+                        <div>
+                            <p style="font-size: 20px;margin-left: 1%;">
+                                OLL or Orientation Last Layer is the third phase of the CFOP method, which aims to orient (with the same color facing up) the top layer of the 3x3. This phase is completely algorithmic and consists of 57 algorithms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <p class="text-center fs-2">Progress Bar</p>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" id="progress-bar"></div>
+                      </div>
+                </div>
+            </div>
+            <hr class="line mt-5">
+    </div>
+
+    <div>
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">OLL</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex flex-wrap justify-content-center" id="case-selection">
+                      
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <p class="text-center fw-bold text-danger">There may be some problems with the 3D cube simulation, I apologize for the inconvenience</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-light mt-5">
+        <div class="row boxG">
+            <div class="col-sm-12 mb-4">
+                <h1 id="Solved Cross" class="text-center fw-bold">Solved Cross</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL1')" type="checkbox" id="OLL1"></input>
+                            <h3 class="fw-bold text-center">Sune</h3>
+                        </div>
+                        <img src="img/OLL1.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o1">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U2' R' U' R U' R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R U R' U (R U2 R')</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U') R' U2 R U R' U R</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) L U L' U L U2 L' </p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL2')" type="checkbox" id="OLL2"></input>
+                            <h3 class="fw-bold text-center">Anti-Sune</h3>
+                        </div>
+                        <img src="img/OLL2.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o2">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U R' U R U2' R' U'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">U2 L' U' L U' (L' U2 L)</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U') R U2 R' U' R U' R'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) R' U' R U' R' U2 R</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL3')" type="checkbox" id="OLL3"></input>
+                            <h3 class="fw-bold text-center">H</h3>
+                        </div>
+                        <img src="img/OLL3.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o3">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U R' U R U' R' U R U2' R'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R U2 (R' U' R U) R' U' R U'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U) R U R' U R U' R' U R U2 R'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL4')" type="checkbox" id="OLL4"></input>
+                            <h3 class="fw-bold text-center">Pi</h3>
+                        </div>
+                        <img src="img/OLL4.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o4">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U2' R2' U R2' U R2' U2' R'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R U2 (R2 U') (R2 U') R2 U2 R</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL5')" type="checkbox" id="OLL5"></input>
+                            <h3 class="fw-bold text-center">L</h3>
+                        </div>
+                        <img src="img/OLL5.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o5">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F' r U R U' r' F y'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">F' r U R' U' r' F R</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U') F R' F' r U R U' r'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL6')" type="checkbox" id="OLL6"></input>
+                            <h3 class="fw-bold text-center">T</h3>
+                        </div>
+                        <img src="img/OLL6.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o6">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R' F' r U R U' r'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r U R' U' r' F R F'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) R' F' r U R U' r' F</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL7')" type="checkbox" id="OLL7"></input>
+                            <h3 class="fw-bold text-center">U</h3>
+                        </div>
+                        <img src="img/OLL7.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o7">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U2' R D R' U2' R D' R2'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R2 D (R' U2 R) D' (R' U2 R')</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) R2 D' R U2 R' D R U2 R</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 id="T Shapes" class="text-center fw-bold">T Shapes</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL8')" type="checkbox" id="OLL8"></input>
+                            <h3 class="fw-bold text-center">OLL 8 (T1)</h3>
+                        </div>
+                        <img src="img/OLL8.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o8">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R' F' R U R U' R'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U') (R' F R F')</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) r' F' r U r U' r' F</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL9')" type="checkbox" id="OLL9"></input>
+                            <h3 class="fw-bold text-center">OLL 9 (T2)</h3>
+                        </div>
+                        <img src="img/OLL9.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o9">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F U R U' R' F'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">F (R U R' U') F'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U) R' F' U' F U R</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mt-5">
+            <div class="col-sm-12 mb-3">
+                <h1 id="Block Shapes" class="text-center fw-bold">Block Shapes</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL10')" type="checkbox" id="OLL10"></input>
+                            <h3 class="fw-bold text-center">OLL 10 (O-)</h3>
+                        </div>
+                        <img src="img/OLL10.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o10">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r U R' U R U2 r'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(r U2 R') U' R U' r'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL11')" type="checkbox" id="OLL11"></input>
+                            <h3 class="fw-bold text-center">OLL 11 (O+)</h3>
+                        </div>
+                        <img src="img/OLL11.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o11">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: l' U' L U' L' U2 l</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(r' U2 R) U R' U r</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) l' U2 L U L' U l</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h1 id="Edges Only" class="text-center fw-bold">Edges Only</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL12')" type="checkbox" id="OLL12"></input>
+                            <h3 class="fw-bold text-center">OLL 12 (A)</h3>
+                        </div>
+                        <img src="img/OLL12.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o12">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F R' F2 r U' r' F2 R2</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(r U R' U') M (U R U' R')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL13')" type="checkbox" id="OLL13"></input>
+                            <h3 class="fw-bold text-center">OLL 13 (B)</h3>
+                        </div>
+                        <img src="img/OLL13.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o13">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r U R' U' M U R U' R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U') M' (U R U' r')</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mt-5">
+            <div class="col-sm-12 mb-4">
+                <h1 id="Lightnings" class="text-center fw-bold">Lightnings</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL14')" type="checkbox" id="OLL14"></input>
+                            <h3 class="fw-bold text-center">OLL 14 (N+)</h3>
+                        </div>
+                        <img src="img/OLL14.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o14">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r U2 R' U' R U' r'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r U R' U (R U2 r')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL15')" type="checkbox" id="OLL15"></input>
+                            <h3 class="fw-bold text-center">OLL 15 (N-)</h3>
+                        </div>
+                        <img src="img/OLL15.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o15">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: l' U2 L U L' U l</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' F' (r U' r') F2 R</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) r' U' R U' R' U2 r</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL16')" type="checkbox" id="OLL16"></input>
+                            <h3 class="fw-bold text-center">OLL 16 (M+)</h3>
+                        </div>
+                        <img src="img/OLL16.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o16">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r' R U' R U2 R' U' R U' R2 r</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">M (R U R' U R U2 R') U M'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL17')" type="checkbox" id="OLL17"></input>
+                            <h3 class="fw-bold text-center">OLL 17 (M-)</h3>
+                        </div>
+                        <img src="img/OLL17.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o17">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: M' U R' U2 R U R' U R2 r'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">M' (R' U' R U' R' U2 R) U' M</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) M (L' U' L U' L' U2 L) U' M'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL18')" type="checkbox" id="OLL18"></input>
+                            <h3 class="fw-bold text-center">OLL 18 (Z+)</h3>
+                        </div>
+                        <img src="img/OLL18.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o18">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U' F U R U' R' F' R U2</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(f R' F' R) (U R U' R') S'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL19')" type="checkbox" id="OLL19"></input>
+                            <h3 class="fw-bold text-center">OLL 19 (Z-)</h3>
+                        </div>
+                        <img src="img/OLL19.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o19">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U B U' R' U R B R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">f' (r U r' U') (r' F r S)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h1 id="P Shapes" class="text-center fw-bold">P Shapes</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL20')" type="checkbox" id="OLL20"></input>
+                            <h3 class="fw-bold text-center">OLL 20 (P+)</h3>
+                         </div>
+                        <img src="img/OLL20.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o20">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R U R' U' F'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) f (R U R' U') f'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL21')" type="checkbox" id="OLL21"></input>
+                            <h3 class="fw-bold text-center">OLL 21 (P-)</h3>
+                         </div>
+                        <img src="img/OLL21.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o21">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F' L' U' L U F</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' (U' F' U F) R</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U') f' L' U' L U f</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL22')" type="checkbox" id="OLL22"></input>
+                            <h3 class="fw-bold text-center">OLL 22 (Q-)</h3>
+                         </div>
+                        <img src="img/OLL22.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o22">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F R U R' U' F' U R</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' U' F (U R U' R') F' R</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL23')" type="checkbox" id="OLL23"></input>
+                            <h3 class="fw-bold text-center">OLL 23 (Q+)</h3>
+                         </div>
+                        <img src="img/OLL23.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o23">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R B' R' U' R U B U' R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">S (R U R' U') (R' F R f')</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mt-5">
+            <div class="col-sm-12">
+                <h1 id="C Shapes" class="text-center fw-bold">C Shapes</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL24')" type="checkbox" id="OLL24"></input>
+                            <h3 class="fw-bold text-center">OLL 24 (CU)</h3>
+                         </div>
+                        <img src="img/OLL24.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o24">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U' F R' F' R U R</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' U' (R' F R F') U R</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL25')" type="checkbox" id="OLL25"></input>
+                            <h3 class="fw-bold text-center">OLL 25 (CT)</h3>
+                         </div>
+                        <img src="img/OLL25.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o25">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F R F' U R U R' d R' U R U</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">f R f' U' r' U' R U M</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h1 id="Fishes" class="text-center fw-bold">Fishes</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL26')" type="checkbox" id="OLL26"></input>
+                            <h3 class="fw-bold text-center">OLL 26 (K2)</h3>
+                         </div>
+                        <img src="img/OLL26.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o26">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U R' U' R' F R F'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(F R' F' R) (U R U' R')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL27')" type="checkbox" id="OLL27"></input>
+                            <h3 class="fw-bold text-center">OLL 27 (K1)</h3>
+                         </div>
+                        <img src="img/OLL27.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o27">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U2 R' F R' F' R2 U2 R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R U2 R2 (F R F' R) U2 R'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL28')" type="checkbox" id="OLL28"></input>
+                            <h3 class="fw-bold text-center">OLL 28 (Y-)</h3>
+                         </div>
+                        <img src="img/OLL28.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o28">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F U R U' R2 F' R U R U' R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U') R' F (R2 U R' U') F'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL29')" type="checkbox" id="OLL29"></input>
+                            <h3 class="fw-bold text-center">OLL 29 (Y+)</h3>
+                         </div>
+                        <img src="img/OLL29.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o29">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F R U R' F' R F U' F' U'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R U R' U (R' F R F') R U2 R'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U) (R U2 R U) (S' R' U R S)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mt-5">
+            <div class="col-sm-12">
+                <h1 id="W Shapes" class="text-center fw-bold">W Shapes</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL30')" type="checkbox" id="OLL30"></input>
+                            <h3 class="fw-bold text-center">OLL 30 (W+)</h3>
+                         </div>
+                        <img src="img/OLL30.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o30">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R' F' R U R U R' U' R U' R'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U) R U' R' U' (R' F R F')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL31')" type="checkbox" id="OLL31"></input>
+                            <h3 class="fw-bold text-center">OLL 31 (W-)</h3>
+                         </div>
+                        <img src="img/OLL31.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o31">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F R U R' U' F2 U F R</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R' F' U' F2 U) (R U' R' F' R)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h1 id="W Shapes" class="text-center fw-bold">Hooks</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL32')" type="checkbox" id="OLL32"></input>
+                            <h3 class="fw-bold text-center">OLL 32 (V+)</h3>
+                         </div>
+                        <img src="img/OLL32.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o32">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: f (R U R' U')2 f'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">F (R U R' U') (R U R' U') F'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U2) f (U R U' R')2 f'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL33')" type="checkbox" id="OLL33"></input>
+                            <h3 class="fw-bold text-center">OLL 33 (V-)</h3>
+                         </div>
+                        <img src="img/OLL33.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o33">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: f' (L' U' L U)2 f</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(F R' F' R) U2 (R U' R' U) R U2 R'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(U) F' (L' U' L U)2 F</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL34')" type="checkbox" id="OLL34"></input>
+                            <h3 class="fw-bold text-center">OLL 34 (E+)</h3>
+                         </div>
+                        <img src="img/OLL34.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o34">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r U R' U R U' R' U R U2 r' U</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r U R' U (R U' R' U) R U2 r'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL35')" type="checkbox" id="OLL35"></input>
+                            <h3 class="fw-bold text-center">OLL 35 (E-)</h3>
+                         </div>
+                        <img src="img/OLL35.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o35">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r' U' R U' R' U R U' R' U2 r U'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r' U' R U' (R' U R U') R' U2 r</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL36')" type="checkbox" id="OLL36"></input>
+                            <h3 class="fw-bold text-center">OLL 36 (R+)</h3>
+                         </div>
+                        <img src="img/OLL36.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o36">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F R2 B' R2 F' R2 B R' U2</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r U' (r2 U) (r2 U) r2 U' r</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL37')" type="checkbox" id="OLL37"></input>
+                            <h3 class="fw-bold text-center">OLL 37 (R-)</h3>
+                         </div>
+                        <img src="img/OLL37.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o37">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R B' R2 F R2 B R2 F' R U2</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r' U (r2 U') (r2 U') r2 U r'</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mt-5">
+            <div class="col-sm-12">
+                <h1 id="Lines" class="text-center fw-bold">Lines</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL38')" type="checkbox" id="OLL38"></input>
+                            <h3 class="fw-bold text-center">OLL 38 (I2)</h3>
+                         </div>
+                        <img src="img/OLL38.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o38">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U' R' F R F' R U' R' U2 R U'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">f (R U R' U') (R U R' U') f'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL39')" type="checkbox" id="OLL39"></input>
+                            <h3 class="fw-bold text-center">OLL 39 (I3)</h3>
+                         </div>
+                        <img src="img/OLL39.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o39">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U' R U' R' U F' U F R</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' (F' U' F U') R U R' U R</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL40')" type="checkbox" id="OLL40"></input>
+                            <h3 class="fw-bold text-center">OLL 40 (I1)</h3>
+                         </div>
+                        <img src="img/OLL40.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o40">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r U2 R' U' R2 r' U R' U' r U' r'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r U r' (U R U' R') (U R U' R') r U' r'</p>
+                            <hr class="line">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r' U' r (U' R' U R)2 r' U r</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL41')" type="checkbox" id="OLL41"></input>
+                            <h3 class="fw-bold text-center">OLL 41 (I4)</h3>
+                         </div>
+                        <img src="img/OLL41.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o41">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F U' R2 D R' U2 R D' R2 U F'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' F (R U R U') R2 F' R2 U' R' U (R U R')</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h1 id="L Shape" class="text-center fw-bold">L Shape</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL42')" type="checkbox" id="OLL42"></input>
+                            <h3 class="fw-bold text-center">OLL 42 (L-)</h3>
+                         </div>
+                        <img src="img/OLL42.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o42">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r U r' U R U' R' r U' r'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r U r' (R U R' U') r U r'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL43')" type="checkbox" id="OLL43"></input>
+                            <h3 class="fw-bold text-center">OLL 43 (L+)</h3>
+                         </div>
+                        <img src="img/OLL43.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o43">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F' R U' L' U L R' F R</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' F' R (L' U' L U) R' F R</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL44')" type="checkbox" id="OLL44"></input>
+                            <h3 class="fw-bold text-center">OLL 44 (J+)</h3>
+                         </div>
+                        <img src="img/OLL44.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o44">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U R' U' R' F R2 U R' U' F'</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(F U R U') R2 F' R (U R U' R')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL45')" type="checkbox" id="OLL45"></input>
+                            <h3 class="fw-bold text-center">OLL 45 (J-)</h3>
+                         </div>
+                        <img src="img/OLL45.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o45">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F U F' R' F R U' R' F' R</h5>
+                        <div class="box rounded mt-4" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' F (R U R') F' R (F U F')</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mt-5">
+            <div class="col-sm-12">
+                <h1 id="Awkward Shaped" class="text-center fw-bold">Awkward Shaped</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL46')" type="checkbox" id="OLL46"></input>
+                            <h3 class="fw-bold text-center">OLL 46 (F-)</h3>
+                         </div>
+                        <img src="img/OLL46.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o46">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U' R U' R' U2 R r U R' U R U2 r'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">r2 D' (r U r') D r2 U' (r' U' r)</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL47')" type="checkbox" id="OLL47"></input>
+                            <h3 class="fw-bold text-center">OLL 47 (F+)</h3>
+                         </div>
+                        <img src="img/OLL47.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o47">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F U R U2 R' U R U2 R' U' F' U'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">F U (R U2 R' U') (R U2 R' U') F'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL48')" type="checkbox" id="OLL48"></input>
+                            <h3 class="fw-bold text-center">OLL 48 (G+)</h3>
+                         </div>
+                        <img src="img/OLL48.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o48">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U' R U' R' U2 R F R U R' U' F'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U R U2 R') F (R U R' U') F'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL49')" type="checkbox" id="OLL49"></input>
+                            <h3 class="fw-bold text-center">OLL 49 (G-)</h3>
+                         </div>
+                        <img src="img/OLL49.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o49">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F U R U' R' F' R' U2 R U R' U R</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R' U' F2 u' (R U R') D R2 B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h1 id="Dot Case" class="text-center fw-bold">Dot Case</h1>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL50')" type="checkbox" id="OLL50"></input>
+                            <h3 class="fw-bold text-center">OLL 50 (DH)</h3>
+                         </div>
+                        <img src="img/OLL50.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o50">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U' R2 D' r U r' D R2 U R'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">R U2 (R2 F R F') U2 (R' F R F')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL51')" type="checkbox" id="OLL51"></input>
+                            <h3 class="fw-bold text-center">OLL 51 (DPi)</h3>
+                         </div>
+                        <img src="img/OLL51.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o51">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R U R' U' S R U R' U' f'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">f (U R U' R') S' (U R U' R') F'</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL52')" type="checkbox" id="OLL52"></input>
+                            <h3 class="fw-bold text-center">OLL 52 (DL)</h3>
+                         </div>
+                        <img src="img/OLL52.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o52">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: S' R U R' S U' R' F R F'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(F R' F' R) U S' (R U' R') S</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL53')" type="checkbox" id="OLL53"></input>
+                            <h3 class="fw-bold text-center">OLL 53 (DT)</h3>
+                         </div>
+                        <img src="img/OLL53.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o53">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R' F' R U S' R U' R' S</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">S' (R U R') S U' (R' F R F')</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL54')" type="checkbox" id="OLL54"></input>
+                            <h3 class="fw-bold text-center">OLL 54 (DU)</h3>
+                         </div>
+                        <img src="img/OLL54.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o54">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: r' U2 R U R' U r2 U2 R' U' R U' r'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(r U R' U R U2 r') (r' U' R U' R' U2 r)</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL55')" type="checkbox" id="OLL55"></input>
+                            <h3 class="fw-bold text-center">OLL 55 (DS-)</h3>
+                         </div>
+                        <img src="img/OLL55.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o55">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: M' U r' U2 r U R' U R2 r' U</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R' F2 R2 U2 R') F' (R U2 R2 F2 R)</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL56')" type="checkbox" id="OLL56"></input>
+                            <h3 class="fw-bold text-center">OLL 56 (DS+)</h3>
+                         </div>
+                        <img src="img/OLL56.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o56">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' F2 R2 U2 R' F' R U2 R2 F2 R</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(R' F2 R2 U2 R') F (R U2 R2 F2 R)</p>
+                        </div>
+                    </div>
+                    <div class="d-inline ms-5">
+                        <div class="d-flex justify-content-center">
+                            <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('OLL57')" type="checkbox" id="OLL57"></input>
+                            <h3 class="fw-bold text-center">OLL 57 (X)</h3>
+                         </div>
+                        <img src="img/OLL57.png" alt="OLL" width="130" height="130" class="d-flex mx-auto cursor" data-bs-toggle="modal" data-bs-target="#modal" id="ollcase" data-name="o57">
+                        <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: M U R U R' U' M2 U R U' r'</h5>
+                        <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                            <p class="fw-bold text-center" style="text-wrap: wrap;">(S' R U R' S U') (R' F R F')</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="mx-auto d-block text-center text-decoration-none fs-3 button mt-5" style="color: #575757;" href="#start">Back Up</a>
+
+
+    <script src="oll.js"></script>
+    <script src="barOLL.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="../3DCube/cubeLogic.js"></script>
+
+    <div w3-include-html="../../html/footer.html"></div>  
+    <script>w3.includeHTML();</script>
+</body>
+</html>
