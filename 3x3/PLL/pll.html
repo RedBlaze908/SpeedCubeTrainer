@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/pll.png">
+    <link rel="stylesheet" href="pll.css">
+    <link rel="stylesheet" href="../3DCube/3Dcube.css">
+    <link rel="stylesheet" href="../../css/generic-header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>PLL - SpeedCubeTrainer</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <div w3-include-html="../../html/navbar.html" id="start"></div>
+
+    <div class="container text-light">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-6">
+                <h1 class="text-center fw-bold">Jump To:</h1>
+                <div class="mx-auto">
+                    <a class="jumpa" href="#Edges Only">Edges Only</a>
+                    <a class="jumpa" href="#Corners Only">Corners Only</a>
+                    <a class="jumpa" href="#Adjacent Swap">Adjacent Swap</a>
+                    <a class="jumpa" href="#Diagonal Swap">Diagonal Swap</a>
+                    <a class="jumpa" href="#G-Perms">G-Perms</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div id="infoF2L" >
+                    <div class="d-flex">
+                        <h1 class="text-center fw-bold ms-5 mt-2">PLL</h1>
+                        <div id="infoBtn" class="toggle-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16" >
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="category-info" style="color:#fff;display: none;margin-left: 5%;">
+                        <h2>3x3</h2>
+                        <div>
+                            <p style="font-size: 20px;margin-left: 1%;">
+                                PLL or Permutation Last Layer is the last step of the CFOP method in which it goes to solve the last layer of the cube with only one algorithm, in total there are 21 algorithms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">PLL</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex flex-wrap justify-content-center" id="case-selection">
+                      
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <p class="text-center fw-bold text-danger">There may be some problems with the 3D cube simulation, I apologize for the inconvenience</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center text-light">
+                <div class="col-sm-4">
+                    <p class="text-center fs-2">Progress Bar</p>
+                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" id="progress-bar"></div>
+                      </div>
+                </div>
+            </div>
+            <hr class="line mt-5">
+    </div>
+
+
+    <div class="container-fluid text-light">
+        
+        <div class="row boxG mb-5">
+            <h1 id="Edges Only" class="text-center fw-bold">Edges Only</h1>
+            <div class="d-flex flex-wrap justify-content-between mb-4">
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll1')" type="checkbox" id="pll2"></input>
+                        <h3 class="fw-bold text-center">Ua</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/ua.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p1">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R' U R' U' R' U' R' U R</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) (U2) (R U R' U) R' U' (R2 U' R') U R' U R</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2">2) (M2 U M) U2 (M' U M2)</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll2')" type="checkbox" id="pll2"></input>
+                        <h3 class="fw-bold text-center">Ub</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/ub.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p2">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: M2 U' M U2 M' U' M2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) (U2) R' U R' U' (R3 U') R' U (R U R2)</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2">2) (M2 U M) U2 (M' U M2)</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll3')" type="checkbox" id="pll3"></input>
+                        <h3 class="fw-bold text-center">H</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/h.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p3">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: M2 U M2 U2 M2 U M2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">M2 U (M2 U2 M2) U M2</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll4')" type="checkbox" id="pll4"></input>
+                        <h3 class="fw-bold text-center">Z</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/z.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p4">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: M2 U M2 U M' U2 M2 U2 M'</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">M' U' (M2 U') (M2 U') M' U2 M2</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2">2) M2 U M2 U M' U2 M2 U2 M'</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <h1 id="Corners Only" class="text-center fw-bold">Corners Only</h1>
+            <div class="d-flex flex-wrap justify-content-between mb-4">
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll5')" type="checkbox" id="pll5"></input>
+                        <h3 class="fw-bold text-center">Aa</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/aa.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p5">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: x R2 D2 R U R' D2 R U' R</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">x (R' U R') D2 (R U' R') D2 R2 x'</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll6')" type="checkbox" id="pll6"></input>
+                        <h3 class="fw-bold text-center">Ab</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/ab.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p6">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: x R' U R' D2 R U' R' D2 R2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">x R2 D2 (R U R') D2 (R U' R) x'</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll7')" type="checkbox" id="pll7"></input>
+                        <h3 class="fw-bold text-center">E</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/z.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p7">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: B' R' F' R B L' R' B' L F L' B L R</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) (R' U' R') D' (R U' R') D (R U R') D' (R U R') D R2</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) x' (R U' R') D (R U R') D' (R U R') D (R U' R') D' x</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mb-5">
+            <h1 id="Adjacent Swap" class="text-center fw-bold">Adjacent Swap</h1>
+            <div class="d-flex flex-wrap justify-content-center mb-4">
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll8')" type="checkbox" id="pll8"></input>
+                        <h3 class="fw-bold text-center">T</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/T.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p8">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: L2 U' L2 D F2 R2 U R2 D' F2 U'</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U') R' F (R2 U' R') U' (R U R' F')</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll9')" type="checkbox" id="pll9"></input>
+                        <h3 class="fw-bold text-center">F</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/F.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p9">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R2 F R F' R' U' F' U F R2 U R' U' R U</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">R' U' F' (R U R' U') R' F (R2 U' R') U' (R U R') U R</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">U' (R' U R U') (R2 F' U' F U) (R F R' F' R2)</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll10')" type="checkbox" id="pll10"></input>
+                        <h3 class="fw-bold text-center">Jb</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/jb.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p10">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U R2 F' R U R U' R' F R U' R'</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">R U R' F' (R U R' U') R' F (R2 U' R')</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll11')" type="checkbox" id="pll11"></input>
+                        <h3 class="fw-bold text-center">Ja</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/ja.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p11">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: x U2 r' U' r U2 R' F R' F' R2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) (U2) x R2 (F R F' R) U2 (r' U r) U2 x'</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) L' U' L F L' U' L U L F' L2 U L</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll12')" type="checkbox" id="pll12"></input>
+                        <h3 class="fw-bold text-center">Ra</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/ra.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p12">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R U2 R' U' R' F' R U2 R U2 R' F R U' R'</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) (R U' R' U') R U R D (R' U' R D') R' U2 R'</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) (R U R') F' (R U2 R' U2) R' F R U (R U2 R')</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll13')" type="checkbox" id="pll13"></input>
+                        <h3 class="fw-bold text-center">Rb</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/rb.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p13">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R2 F R U R U' R' F' R U2 R' U2 R</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) (R' U2 R U2) R' F (R U R' U') R' F' R2</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) x' (R U' R') D (R U R') D' (R U R') D (R U' R') D' x</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <h1 id="Diagonal Swap" class="text-center fw-bold">Diagonal Swap</h1>
+            <div class="d-flex flex-wrap justify-content-between mb-4">
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll14')" type="checkbox" id="pll14"></input>
+                        <h3 class="fw-bold text-center">Y</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/y.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p14">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: F R' F' R U R U' R' F R U' R' U R U R' F'</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">F (R U' R' U') R U R' F' (R U R' U') R' F R F'</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll15')" type="checkbox" id="pll15"></input>
+                        <h3 class="fw-bold text-center">Na</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/na.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p15">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup:(R U' L U2  R' U L')2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">(R U R' U) R U R' F' (R U R' U') R' F (R2 U' R') U2 R U' R'</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll16')" type="checkbox" id="pll16"></input>
+                        <h3 class="fw-bold text-center">Nb</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/nb.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p16">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: f R' f' U R' U R U' R' F' U F R U R' U' R</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) r' D' F r U' r' F' D r2 U r' U' r' F r F'</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) (R' U R U') R' (F' U' F) R U (R' U' R U') f R f'</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll17')" type="checkbox" id="pll17"></input>
+                        <h3 class="fw-bold text-center">V</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/v.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p17">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R2 D' R2 U R2 D U' R D' R D R' U R U' R</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">1) F' U F' U' R' F' (R2 U' R') U R' F R F</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) (U') (R' U R' U') R D' R' D R' U D' R2 U' R2 D R2</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">3) R U' (R U R' D) (R D' R U' D) (R2 U R2 D' R2)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row boxG mb-5">
+            <h1 id="G-Perms" class="text-center fw-bold">G-Perms</h1>
+            <div class="d-flex flex-wrap justify-content-between mb-4">
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll18')" type="checkbox" id="pll18"></input>
+                        <h3 class="fw-bold text-center">Ga</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/ga.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p18">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: D R' U' R U D' R2 U R' U R U' R U' R2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">R2 (U R' U R') U' R U' R2 (D U') R' U R D'</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll19')" type="checkbox" id="pll19"></input>
+                        <h3 class="fw-bold text-center">Gb</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/gb.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p19">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R2 u R' U R' U' R u' R2 F' U F U'</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">U (F' U' F) R2 u (R' U R U') R u' R2</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll20')" type="checkbox" id="pll20"></input>
+                        <h3 class="fw-bold text-center">Gc</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/gc.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p20">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R2 F' R U R U' R' F' R U2 R' U2 R' F2 R2</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">D R2 (U' R U' R) U R' U R2 (D' U) R U' R'</p>
+                        <div class="line"></div>
+                        <p class="fw-bold text-center mt-2" style="text-wrap: wrap;">2) (U2) R2 F2 R U2 R U2 R' F R U R' U' R' F R2</p>
+                    </div>
+                </div>
+                <div class="ms-5">
+                    <div class="d-flex justify-content-center">
+                        <input class="mx-2 mt-2 d-block form-check-input" onclick="checkBtn('pll21')" type="checkbox" id="pll21"></input>
+                        <h3 class="fw-bold text-center">Gd</h3>
+                    </div>
+                    <img class="d-flex mx-auto cursor" src="img/gd.png" alt="PLL" width="130" height="130" data-bs-toggle="modal" data-bs-target="#modal" id="pllcase" data-name="p21">
+                    <h5 class="fw-bold text-center mt-2" style="text-wrap: wrap;">Setup: R2 U' R U' R U R' U R2 D' U R U' R' D</h5>
+                    <div class="box rounded mt-4 m-auto" style="width: 17rem;">
+                        <p class="fw-bold text-center" style="text-wrap: wrap;">D' R U R' (U' D) R2 U' R U' (R' U R' U) R2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="mx-auto d-block text-center text-decoration-none fs-3 button mt-5" style="color: #575757;" href="#start">Back Up</a>
+
+
+    
+    <script src="pll.js"></script>
+    <script src="barPLL.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="../3DCube/cubeLogic.js"></script>
+    <script src="pll.js"></script>
+
+    <div w3-include-html="../../html/footer.html" class="footer"></div>
+    <script>w3.includeHTML();</script>
+</body>
+</html>
