@@ -1,0 +1,33 @@
+.btnG {
+    background-color: rgb(91, 91, 91);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    transition-duration: 0.5s;
+    color: rgb(222, 219, 219);
+    padding: 5px;
+    &:hover {
+        transition-duration: 0.5s;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+}
+
+.btnNotWork {
+    background-color: rgb(91, 91, 91);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    transition-duration: 0.5s;
+    color: rgb(222, 219, 219);
+    padding: 5px;
+    &:hover {
+        transition-duration: 0.5s;
+        background-color: lightgray;
+        cursor: no-drop;
+    }
+}
