@@ -159,14 +159,14 @@ img {
 
 .imgCube3 {
     rotate: 25deg;
-    margin-left: -40%;
-    margin-top: 14%;
+    margin-left: -48%;
+    margin-top: -12%;
 }
 
 .imgCube4 {
     rotate: -25deg;
-    margin-left: 38%;
-    margin-top: 18%;
+    margin-left: 40%;
+    margin-top: -10%;
 }
 
 @media (max-width: 551px) {
