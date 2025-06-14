@@ -91,6 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function newAlg() {
         let selectedCases = null;
+
+        if (eg0) {
+            const rand = Math.floor(Math.random() * 40);
+            selectedCases = eg0A[rand];
+        }
+
+        if (eg1) {
+            const rand = Math.floor(Math.random() * 40);
+            selectedCases = eg1A[rand];
+        }
+        
         if (eg2) {
             const rand = Math.floor(Math.random() * 40);
             selectedCases = eg2A[rand];
