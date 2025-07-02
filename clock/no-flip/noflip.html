@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/clockW base.png">
+    <link rel="stylesheet" href="../../css/generic-header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>No Flip - SpeedCubeTrainer</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <div w3-include-html="../../html/navbar.html" id="start"></div>
+    
+    <div class="container text-light">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-12">
+                <h1 class="fw-bold text-center">Clock - No Flip</h1>
+                <p class="fs-5 w-75 m-auto text-center">
+                    Let's start by saying that to solve the clock without ever rotating it we 
+                    have to start from a face do some counting and memorize some numbers, at 
+                    the end we should go back to the starting face and perform the moves we just 
+                    counted, for the tutorial we would use the black face as the starting face, 
+                    first let's see what are the steps to memorize the numbers.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">M1</h1>
+                <p class="fs-4">
+                    The first number we have to memorize will be the sum of two other numbers, 
+                    so in the initial face from which we start we are going to see how many hours 
+                    it takes to go from L to U (remember that we also go anti-clockwise many times).
+                    <br><br>
+                    Once we remember the number we turn the cube with y2 and see how much L needs to 
+                    get to UL, found the amount of hours we add this value with the previous one and we 
+                    have the first number to memorize that we would use later.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">L to U</h2>
+                            <img src="../img/clockB LtoU.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">L to UL</h2>
+                            <img src="../img/clockW LtoUL.png" alt="ltou">
+                        </div>
+                    </div>
+                    <h1 class="text-center fw-bold">M1 = (L to U) + (L to UL)</h1>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">None</h2>
+                            <img src="../img/clockB base.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">U to C</h2>
+                            <img src="../img/clockW UtoC.png" alt="ltou">
+                        </div>
+                    </div>
+                    <h1 class="text-center fw-bold">M2</h1>
+                </div>
+                
+            </div>
+            <div class="col-sm-6">
+                <h1 class="fw-bold">M2</h1>
+                <p class="fs-4">
+                    The second number we get simply by looking at the difference in hours between U and C, 
+                    well let's memorize that as well and now we are at a total of two memorized numbers.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">M3</h1>
+                <p class="fs-4">
+                    Third number we memorize by simply looking at the difference in hours between L and U, 
+                    now we are at the quota of three memorized numbers.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">None</h2>
+                            <img src="../img/clockB base.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">L to U</h2>
+                            <img src="../img/clockW LtoU.png" alt="ltou">
+                        </div>
+                    </div>
+                    <h1 class="text-center fw-bold">M3</h1>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">R to D</h2>
+                            <img src="../img/clockB RtoD.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">R to DR</h2>
+                            <img src="../img/clockW RtoDR.png" alt="ltou">
+                        </div>
+                    </div>
+                    <h1 class="text-center fw-bold">M4 = (R to D) + (R to DR)</h1>
+                </div>
+                
+            </div>
+            <div class="col-sm-6">
+                <h1 class="fw-bold">M4</h1>
+                <p class="fs-4">
+                    For the fourth number we would again do a sum, so we turn the cube with y2 and look from 
+                    R to D the difference in hours, then turn and do R to DR and add them up, so we get the 
+                    fourth number to remember.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">M5</h1>
+                <p class="fs-4">
+                    For the last one (the fifth) we stay on the face we came up with first (so the one where we did R to DR) 
+                    and now we do the difference in hours between D to C and we are done with the five numbers we have to remember.
+                    <br><br>
+                    Now after memorizing it we do y2 to return to the initial face with which we started memorizing numbers.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">None</h2>
+                            <img src="../img/clockB base.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">D to C</h2>
+                            <img src="../img/clockW DtoC.png" alt="ltou">
+                        </div>
+                    </div>
+                    <h1 class="text-center fw-bold">M5</h1>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <div class="line mt-3 mb-4"></div>
+            <h1 class="text-center fw-bold">Now let's look at the moves to be made</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">1</h1>
+                <p class="fs-4">
+                    First we lower the DL pin and keep all the others raised. we now go to perform M1 on any of the 
+                    raised pins (I recommend performing the first move with UR pin). after the first move 
+                    (we can do them simultaneously) we go to perform the second M2 on the DL pin (the only one lowered).
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-inline mx-3">
+                        <h2 class="text-center">DR down</h2>
+                        <img src="../img/clockB DR.png" alt="ltou" class="m-auto d-flex">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">2</h1>
+                <p class="fs-4">
+                    Now we also pull down the UL pin (so we have all the left pins down) now we are going to 
+                    run M3 typically on the UL one, with in place of the UR pin we have to make the U clock align 
+                    with the R clock intuitively.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">UL down</h2>
+                            <img src="../img/clockB UL.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">U to L</h2>
+                            <img src="../img/clockB UtoR.png" alt="ltou">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">3</h1>
+                <p class="fs-4">
+                    Third step we pull down the UR pin and go to align all the hands in the top left corner 
+                    with each other, more in detail we use the DR pin to align the center with U or with L, 
+                    then we use UL to align the top left clock with U or with L, in this way we have created a block.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">DR</h2>
+                            <img src="../img/clockB DL.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">Block</h2>
+                            <img src="../img/clockB block.png" alt="ltou">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">4</h1>
+                <p class="fs-4">
+                    Fourth step we raise all pins except the UR pin, after which we perform M4 on one 
+                    of the raised pins, and then do M5 on the UR pin.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">UR</h2>
+                            <img src="../img/clockB UR.png" alt="ltou">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">5</h1>
+                <p class="fs-4">
+                    Fifth step we go to pull down the DR pin and with the UL pin we go to align the 
+                    D clock with R, simultaneously we can go to align the clock in the upper right 
+                    corner with the lower left corner using the UR pin.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">DR</h2>
+                            <img src="../img/clockB DR2.png" alt="ltou">
+                        </div>
+                        <div class="d-inline">
+                            <h2 class="text-center">D to R & UR to DL</h2>
+                            <img src="../img/clockB DtoR&UrtoDl.png" alt="ltou">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">6</h1>
+                <p class="fs-4">
+                    Sixth step we go to lower the DL pin and go to align the block we created with 
+                    clocks D and R (it might happen that the clock in the lower left corner is not aligned 
+                    with the others in this case we go to move it using DR to align it with D or R which should be equal).
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">DL</h2>
+                            <img src="../img/clockB DL3.png" alt="ltou">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="fw-bold">7</h1>
+                <p class="fs-4">
+                    Last step we go to put the DR pin on (so we have a slash) and go to align all the hands on 12 using UR and UL.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="d-inline">
+                    <div class="d-flex">
+                        <div class="d-inline mx-3">
+                            <h2 class="text-center">UL & DR</h2>
+                            <img src="../img/clockB UL&DR.png" alt="ltou">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-left: 45%;margin-top: 5%;background-color: lightgray;width: 200px;text-align: center;border-radius: 15px;" class="mb-4">
+            <a href="#start" style="color:#575757;font-size: 25px;text-decoration: none;">Back Up</a>
+        </div>
+
+    </div>
+
+    <div w3-include-html="../../html/footer.html" class="footer"></div>
+    <script>w3.includeHTML();</script>
+</body>
+</html>
