@@ -14,14 +14,6 @@ footer {
     font-size: 26px;
 }
 
-#scramble {
-    margin-left: 18%;
-    margin-top: 2%;
-    font-size: 25px;
-    font-weight: bold;
-    width: 800px;
-}
-
 #timer {
     font-size: 88px;
     margin: 20px 0;
@@ -63,8 +55,10 @@ footer {
     -webkit-user-drag: none;
 }
 
-
-
 .box {
     border: 2px solid lightgray;
+}
+
+.blur {
+    filter: blur(20px);
 }
