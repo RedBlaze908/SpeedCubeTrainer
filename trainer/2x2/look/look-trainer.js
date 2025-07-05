@@ -89,22 +89,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let lastIndex = -1;
 
+    let imgHint = document.getElementById('hintImg');
+    let scrambleCase = document.getElementById('hintSetup');
+    let solutionMoves = document.getElementById('hintSol');
+
     function newAlg() {
         let selectedCases = null;
 
         if (eg0) {
             const rand = Math.floor(Math.random() * 40);
-            selectedCases = eg0A[rand];
+            selectedCases = eg0A[rand].scramble;
+            imgHint.src = eg0A[rand].img;
+            scrambleCase.textContent = eg0A[rand].scramble;
+            solutionMoves.textContent = eg0A[rand].solution;
         }
 
         if (eg1) {
             const rand = Math.floor(Math.random() * 40);
-            selectedCases = eg1A[rand];
+            selectedCases = eg1A[rand].scramble;
+            imgHint.src = eg1A[rand].img;
+            scrambleCase.textContent = eg1A[rand].scramble;
+            solutionMoves.textContent = eg1A[rand].solution;
         }
         
         if (eg2) {
             const rand = Math.floor(Math.random() * 40);
-            selectedCases = eg2A[rand];
+            selectedCases = eg2A[rand].scramble;
+            imgHint.src = eg2A[rand].img;
+            scrambleCase.textContent = eg2A[rand].scramble;
+            solutionMoves.textContent = eg2A[rand].solution;
         }
 
         if (selectedCases === null) {
