@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/m2.png">
+    <link rel="stylesheet" href="../../../css/generic-header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>M2 - SpeedCubeTrainer</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+    <div w3-include-html="../../../html/navbar.html" id="start"></div>
+    
+
+    <div class="container text-light">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="fw-bold text-center mt-4">M2 [Edges]</h1>
+                <p class="fs-4 text-wrap text-center">
+                    M2 is a faster method for solving the edges blindfolded than the Beginner's Old Pochmann, 
+                    it uses M2 instead of T Perm. M2 isn't raccomanded for beginners, because the method has 
+                    some exceptions and can be way harder for Beginners.
+                </p>
+                <div class="line mb-4 mt-4"></div>
+                <div class="fs-5">
+                    <h3 class="fw-bold text-center">Basic principle</h3>
+                    <ul>
+                        <li>In the blindfold the cube is resolved using commutators and a buffer position (starting position).</li>
+                        <li>In the M2 method, the buffer position for the edges is UF (Up-Front, which the upper adhesive of the piece between up and front).</li>
+                        <li>The idea is:</li>
+                        <ul style="list-style-type: decimal;">
+                            <li>Choose a edge to solve.</li>
+                            <li>With a move M2 (moving only the central vertical layer) send the edge from the target position to the buffer.</li>
+                            <li>Apply a sequence that exchanges the buffer with a piece in the correct position.</li>
+                            <li>Go back with the reverse M2 move.</li>
+                        </ul>
+                    </ul>
+
+                    <div class="line mb-4 mt-4"></div>
+                    <h3 class="fw-bold text-center">Target management</h3>
+                    <ul>
+                        <li>All edges are "brought" to one of the special positions that can be exchanged with buffer with M2.</li>
+                        <li>For most cases it is done:</li>
+                        <ul style="list-style-type: decimal;">
+                            <li>Bring the target to DB (Down-Back) using a setup Move.</li>
+                            <li>Do M2 move.</li>
+                            <li>Return with the reverse setup.</li>
+                        </ul>
+                    </ul>
+
+                    <div class="line mb-4 mt-4"></div>
+                    <h3 class="fw-bold text-center">Particular cases</h3>
+                    <ul>
+                        <li>There are 4 "special" positions (those in layer M) that cannot be treated like the others and have slightly different sequences:</li>
+                        <ul style="list-style-type: decimal;">
+                            <li>DF (Buffer herself, don't touch it if not to exchange)</li>
+                            <li>UF, UB, DB</li>
+                        </ul>
+                        <li>These require personalized cases in order not to ruin orientation.</li>
+                        <li>If the number of exchanges of the edges is odd, you will have a case of parity (classic in the blind) and you will have to manage it by reversing two corners at the end.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="line mb-4"></div>
+                <img src="../img/letter.png" alt="letter scheme" width="400" height="300" class="m-auto d-flex">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <table class="table table-striped-columns w-50 rounded mx-1">
+                      <thead>
+                        <tr class="table-dark">
+                          <th scope="col">Piece</th>
+                          <th scope="col">Setup Move</th>
+                          <th scope="col">Reverse Setup</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="table-dark">
+                          <th scope="row">B</th>
+                          <td>R' U R U'</td>
+                          <td>U R' U' R</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">D</th>
+                          <td>L U' L' U</td>
+                          <td>U' L U L'</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">Q</th>
+                          <td>B L' B'</td>
+                          <td>B L B'</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">R</th>
+                          <td>B L2 B'</td>
+                          <td>B' L2 B</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">S</th>
+                          <td>B L B'</td>
+                          <td>B' L' B</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">T</th>
+                          <td>u' L' u </td>
+                          <td>u L u' </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">F</th>
+                          <td>U R U' </td>
+                          <td>U' R' U </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">H</th>
+                          <td>U' L' U </td>
+                          <td>U L U' </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">I</th>
+                          <td>B' R B </td>
+                          <td>B R' B' </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">J</th>
+                          <td>u R u' </td>
+                          <td>u' R' u </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">K</th>
+                          <td>B' R' B </td>
+                          <td>B R B' </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">L</th>
+                          <td>B' R2 B </td>
+                          <td>B R2 B' </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">N</th>
+                          <td>U' L U </td>
+                          <td>U L' U' </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">P</th>
+                          <td>U R' U' </td>
+                          <td>U' R U </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">V</th>
+                          <td>U R2 U' </td>
+                          <td>U' R2 U </td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">X</th>
+                          <td>U' L2 U </td>
+                          <td>U L2 U' </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-striped-columns w-50 rounded">
+                      <thead>
+                        <tr class="table-dark">
+                          <th scope="col">Piece</th>
+                          <th scope="col">Setup Move</th>
+                          <th scope="col">Reverse Move</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="table-dark">
+                          <th scope="row">E | Even target is E: apply the alg for O</th>
+                          <td>U' (R' F' R) S</td>
+                          <td>R' F R S' U M2</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">C</th>
+                          <td>U2 M' U2 M'</td>
+                          <td></td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">W</th>
+                          <td>M U2 M U2</td>
+                          <td></td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">O | Even target is O: apply the alg for E</th>
+                          <td>(M2) U' S (R' F' R)</td>
+                          <td>S' (R' F R) U</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">A</th>
+                          <td>M2</td>
+                          <td></td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">M</th>
+                          <td>(U' M')*3 U' M (U' M')*4</td>
+                          <td></td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">K</th>
+                          <td>None</td>
+                          <td>None</td>
+                        </tr>
+                        <tr class="table-dark">
+                          <th scope="row">U</th>
+                          <td>None</td>
+                          <td>None</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div w3-include-html="../../../html/footer.html" class="footer"></div>
+    <script>w3.includeHTML();</script>
+</body>
+</html>
